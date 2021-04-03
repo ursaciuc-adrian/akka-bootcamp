@@ -1,8 +1,5 @@
 using System;
 using Akka.Actor;
-using WinTail.Messages.ErrorMessages;
-using WinTail.Messages.SuccessMessages;
-using WinTail.Messages.SystemMessages;
 
 namespace WinTail
 {
@@ -32,11 +29,9 @@ namespace WinTail
             GetAndValidateInput();
         }
         
-        private void DoPrintInstructions()
+        private static void DoPrintInstructions()
         {
-            Console.WriteLine("Write whatever you want into the console!");
-            Console.WriteLine("Some entries will pass validation, and some won't...\n\n");
-            Console.WriteLine("Type 'exit' to quit this application at any time.\n");
+            Console.WriteLine("Please provide the URI of a log file on disk.\n");
         }
         
         /// <summary>

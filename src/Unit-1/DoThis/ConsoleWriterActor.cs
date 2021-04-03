@@ -1,7 +1,5 @@
 ﻿using System;
 using Akka.Actor;
-using WinTail.Messages.ErrorMessages;
-using WinTail.Messages.SuccessMessages;
 
 namespace WinTail
 {
@@ -15,11 +13,11 @@ namespace WinTail
         {
             switch (message)
             {
-                case InputError error:
+                case Messages.InputError error:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(error.Reason);
                     break;
-                case InputSuccess success:
+                case Messages.InputSuccess success:
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(success.Reason);
                     break;
